@@ -8,7 +8,8 @@
         @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
         html {
-            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-family: Montserrat, sans-serif;
+            color: #4d4d4d;
         }
 
         /* Style CSS pour la mise en page */
@@ -18,8 +19,7 @@
             background-color: #f2f2f2; /* Couleur de fond beige clair */
         }
         header {
-            background: linear-gradient(to bottom, rgba(203, 230, 173, 0.8), rgba(228, 230, 173, 0.5)); /* Dégradé de vert pastel */
-            color: #333; /* Couleur du texte foncée */
+            background: rgba(198, 206, 195, 1);
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -35,8 +35,7 @@
             clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
         }
         footer {
-            background: linear-gradient(to bottom, rgba(203, 230, 173, 0.8), rgba(228, 230, 173, 0.5)); /* Dégradé de vert pastel */
-            color: #333; /* Couleur du texte foncée */
+            background: rgba(198, 206, 195, 1);
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -52,9 +51,8 @@
             clip-path: polygon(0 0, 0 100%, 100% 0)
         }
         .logo {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             overflow: hidden;
             display: inline-block;
             margin-right: 20px;
@@ -62,7 +60,6 @@
         .logo img {
             width: 100%;
             height: auto;
-            border-radius: 50%;
         }
 
         h1 {
@@ -83,12 +80,13 @@
             padding: 20px;
         }
         .card {
-            border: 1px solid #ccc;
+            border: 2px solid rgba(198, 206, 195, 1);
+            box-shadow: 10px 5px 5px rgba(198, 206, 195, 1);
             border-radius: 10px;
             padding: 20px;
             margin: 20px 10px; /* Réduction de la marge horizontale */
             display: flex;
-            align-items: center;
+            max-width: 400px;
         }
         .card img {
             border-radius: 50%;
@@ -104,8 +102,7 @@
         }
 
         .contact-banner {
-            background: linear-gradient(to bottom, rgba(203, 230, 173, 0.8), rgba(228, 230, 173, 0.5));
-            color: #333;
+            background: rgba(198, 206, 195, 1);
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -189,70 +186,183 @@
             display: flex;
             align-items: center;
         }
+
+        .info-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Ajoutez une marge entre chaque paire image-texte si nécessaire */
+        }
+
+        .arrow-icon {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+
+        .collapse-container.active #arrow-icon {
+            transform: rotate(90deg);
+        }
+        .contact-link {
+            display: block;
+            font-size: 18px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #75945e; /* Couleur de survol */
+        }
+        .copyright {
+            text-align: center;
+            font-size: 14px;
+            color: #777; /* Couleur du texte de copyright */
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body id="top">
     <header>
         <div class="logo">
-            <img src="https://www.cabinetdentaireluc.com/wp-content/uploads/Favicon2-cabinet-dentaire-drs-luc.png" alt="Logo du cabinet dentaire CMG et associés">
+            <img src="images/logo.png" alt="Logo du cabinet dentaire CMG et associés">
         </div>
-        <h1>Cabinet dentaire CMG et associés</h1>
+        <h1>Cabinet Dentaire CMG & associés</h1>
         <br/>
-        <h2><img src="images/clock.png" style="max-height: 18px;"> en formation <img src="images/clock.png" style="max-height: 18px;"></h2>
+        <h2><img src="images/clock.png" style="max-height: 18px;"> En formation <img src="images/clock.png" style="max-height: 18px;"></h2>
     </header>
     <div class="container">
         <div class="infos">
             <img src="images/building.png" style="max-height: 100px; margin-right: 25px;">
             <p>
-                Les Drs Martini et Grasset sont heureux de vous retrouver prochainement dans leur nouveau cabinet dentaire qui devrait voir le jour début 2024 !
+                Les Docteurs Martini et Grasset sont heureux de vous retrouver prochainement dans leur nouveau cabinet dentaire qui devrait voir le jour début 2024 !
             </p>
         </div>
         <br/>
         <div class="infos">
             <p>
-                Actuellement en congé maternité, le Dr Martini pouponne, mais vous pouvez prendre RDV avec le Dr Grasset dès à présent au
+                Actuellement en congé maternité, le Docteur Martini pouponne et sera de retour pour l'ouverture du nouveau cabinet.
+                <br/>Vous pouvez prendre rendez-vous avec le Docteur Grasset en vous rendant sur sa page Doctolib ci-dessous.
             </p>
             <img src="images/pregnant.png" style="max-height: 100px; margin-left: 25px;">
         </div>
         <br/>
         <div class="cards-container">
             <div class="card">
-                <img src="https://storage.googleapis.com/annuaire-h/medium_toulon_dr_claire_martini_a4fe410219/medium_toulon_dr_claire_martini_a4fe410219.jpeg" alt="Photo du Dr Claire Martini">
+                <img src="images/drmartini.png" alt="Photo du Docteur Claire Martini">
                 <div>
-                    <h3>Dr Claire Martini</h3>
-                    <div><img src="images/tooth.png" style="max-height: 18px;">Chirurgien dentiste</div>
-                    <div><img src="images/graduated.png" style="max-height: 18px;">DU de paro</div>
-                    <div><img src="images/email.png" style="max-height: 18px;">martiniclaire@ymail.com</div>
-                    <div><img src="images/phone.png" style="max-height: 18px;">0676693468</div>
+                    <h2 style="margin-top: 0;">Dr Claire Martini</h2>
+                    <div class="info-container">
+                        <img src="images/tooth.png" style="max-height: 18px;">
+                        Chirurgien dentiste
+                    </div>
+                    <div class="info-container">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Diplomée de la faculté de Marseille
+                    </div>
+                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Autres diplomes&nbsp;&nbsp;
+                        <img src="images/arrow.png" class="js-arrow-icon" style="max-height: 18px;">
+                    </div>
+                    <div class="js-diplomas" style="display: none;">
+                        <div class="info-container">
+                            <div style="height: 18px; width: 18px; margin-right: 20px;">
+                            </div>
+                            <ul style="margin: 0; padding-left: 25px;">
+                                <li>
+                                    Injection Acide Hyaluronique - Biotech Dental
+                                </li>
+                                <li>
+                                    Formation Laser - Gérard Rey
+                                </li>
+                                <li>
+                                    Invisalign GO - Align Technology
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <img src="images/email.png" style="max-height: 18px;">
+                        drmartiniclaire@gmail.com
+                    </div>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.cabinetdentaire-picot.fr/uploads/member/5/1666964955/Z069jN3pch_1666964955.jpg" alt="Photo du Dr Mathieu Grasset">
+                <img src="images/drgrasset.png" alt="Photo du Dr Matthieu Grasset">
                 <div>
-                    <h3>Dr Mathieu Grasset</h3>
-                    <div><img src="images/tooth.png" style="max-height: 18px;">Chirurgien dentiste</div>
-                    <div><img src="images/graduated.png" style="max-height: 18px;">DU de paro</div>
-                    <div><img src="images/email.png" style="max-height: 18px;">martiniclaire@ymail.com</div>
-                    <div><img src="images/phone.png" style="max-height: 18px;">0676693468</div>
+                    <h2 style="margin-top: 0;">Dr Matthieu Grasset</h2>
+                    <div class="info-container">
+                        <img src="images/tooth.png" style="max-height: 18px;">
+                        Chirurgien dentiste
+                    </div>
+                    <div class="info-container">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Diplomé de la faculté de Porto
+                    </div>
+                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Autres diplomes&nbsp;&nbsp;
+                        <img src="images/arrow.png" class="js-arrow-icon" style="max-height: 18px;">
+                    </div>
+                    <div class="js-diplomas" style="display: none;">
+                        <div class="info-container">
+                            <div style="height: 18px; width: 18px; margin-right: 20px;">
+                            </div>
+                            <ul style="margin: 0; padding-left: 25px;">
+                                <li>
+                                    Injection Acide Hyaluronique - Biotech Dental
+                                </li>
+                                <li>
+                                    Formation Laser - Gérard Rey
+                                </li>
+                                <li>
+                                    Invisalign GO - Align Technology
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <img src="images/email.png" style="max-height: 18px;">
+                        gmcabinetdentaire@gmail.com
+                    </div>
+                    <div class="info-container">
+                        <img src="images/doctolib.png" style="max-height: 18px;">
+                        <a href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">Page Doctolib</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <h2>Contactez-nous</h2>
+        <h2 style="margin-bottom: 0;">Restons en contact !</h2>
         <div class="container">
-            <form>
-                <input name="name" type="text" class="feedback-input" placeholder="Nom" />
-                <input name="phone" type="text" class="feedback-input" placeholder="Téléphone" />
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <textarea name="text" class="feedback-input" placeholder="Commentaire"></textarea>
-                <button type="submit">
-                    Envoyer
-                    <img src="images/send.png" style="max-height: 18px;">
-                </button>
-            </form>
+            <a class="contact-link" href="mailto:drmartiniclaire@gmail.com">
+                <img src="images/email.png" style="max-height: 18px;"> Contacter le Dr. Martini
+            </a>
+            <a class="contact-link" href="mailto:gmcabinetdentaire@gmail.com">
+                <img src="images/email.png" style="max-height: 18px;"> Contacter le Dr. Grasset
+            </a>
+            <br/>
+            <p class="copyright">© 2023 Cabinet Dentaire CMG & associés - Réalisé par Brice Fernandez</p>
         </div>
     </footer>
 </body>
+<script>
+    function toggleDiplomas(cardElement) {
+        var diplomas = cardElement.parentNode.querySelector(".js-diplomas");
+        var arrowIcon = cardElement.parentNode.querySelector(".js-arrow-icon");
+        var collapseContainer = cardElement.parentNode.querySelector(".collapse-container");
+
+        if (diplomas.style.display === "none" || diplomas.style.display === "") {
+            diplomas.style.display = "block";
+            arrowIcon.style.transform = "rotate(180deg)";
+            collapseContainer.classList.add("active");
+        } else {
+            diplomas.style.display = "none";
+            arrowIcon.style.transform = "rotate(0deg)";
+            collapseContainer.classList.remove("active");
+        }
+    }
+</script>
 </html>
