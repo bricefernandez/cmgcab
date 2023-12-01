@@ -27,7 +27,7 @@
         header::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
             right: 0;
             height: 30px;
@@ -88,16 +88,6 @@
             display: flex;
             max-width: 400px;
         }
-        @media screen and (max-width: 992px) {
-            .card {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .imgdoc {
-                margin-bottom: 15px;
-            }
-        }
         .card img {
             border-radius: 50%;
             max-width: 100px;
@@ -109,7 +99,6 @@
             display: flex;
             justify-content: center; /* Centrer les cartes horizontalement */
             flex-wrap: wrap;
-            margin: 0 10px;
         }
 
         .contact-banner {
@@ -198,6 +187,11 @@
             align-items: center;
         }
 
+        .infos > img {
+            max-height: 100px;
+            margin-right: 25px;
+        }
+
         .info-container {
             display: flex;
             align-items: center;
@@ -230,6 +224,27 @@
             color: #777; /* Couleur du texte de copyright */
             margin-top: 20px;
         }
+
+        .separator {
+            width: 10%;
+            border: solid 1px lightgray;
+            margin: 15px auto;
+        }
+
+        @media screen and (max-width: 992px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .imgdoc {
+                margin-bottom: 15px;
+            }
+
+            .infos > img {
+                max-height: 60px;
+            }
+        }
     </style>
 </head>
 
@@ -244,20 +259,25 @@
     </header>
     <div class="container">
         <div class="infos">
-            <img src="images/building.png" style="max-height: 100px; margin-right: 25px;">
+            <img src="images/building.png">
             <p>
-                Les Docteurs Martini et Grasset sont heureux de vous retrouver prochainement dans leur nouveau cabinet dentaire qui devrait voir le jour début 2024 !
+                Les Docteurs Martini et Grasset sont heureux de vous retrouver prochainement dans leur nouveau cabinet dentaire qui devrait voir le jour courant  2024 !
             </p>
         </div>
-        <br/>
+        <div class="separator"></div>
         <div class="infos">
             <p>
-                Actuellement en congé maternité, le Docteur Martini pouponne et sera de retour pour l'ouverture du nouveau cabinet.
-                <br/>Vous pouvez prendre rendez-vous avec le Docteur Grasset en vous rendant sur sa page Doctolib ci-dessous.
+                Actuellement en congé maternité, le Docteur Martini pouponne et sera de retour pour l'ouverture du nouveau cabinet. Vous pouvez néanmoins la contacter par mail pour toute demande, elle reste joignable.
             </p>
-            <img src="images/pregnant.png" style="max-height: 100px; margin-left: 25px;">
+            <img src="images/pregnant.png">
         </div>
-        <br/>
+        <div class="separator"></div>
+        <div class="infos">
+            <img src="images/doctolib.png" style="border-radius: 50%">
+            <p>
+                La prise de rendez-vous est possible avec le Docteur Grasset en vous rendant sur sa <a href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">page Doctolib</a> ci-dessous (en cas de besoin les patients du Docteur Martini sont les bienvenus).            </p>
+        </div>
+        <br>
         <div class="cards-container">
             <div class="card">
                 <img class="imgdoc" src="images/drmartini.png" alt="Photo du Docteur Claire Martini">
