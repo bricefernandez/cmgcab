@@ -1,0 +1,240 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+    font-family: Montserrat, sans-serif;
+    color: #4d4d4d;
+}
+
+/* Style CSS pour la mise en page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Couleur de fond beige clair */
+}
+header {
+    background: rgba(198, 206, 195, 1);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #f2f2f2;
+    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
+}
+footer {
+    background: rgba(198, 206, 195, 1);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #f2f2f2;
+    clip-path: polygon(0 0, 0 100%, 100% 0)
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 20px;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.card {
+    border: 2px solid rgba(198, 206, 195, 1);
+    box-shadow: 10px 5px 5px rgba(198, 206, 195, 1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 10px; /* Réduction de la marge horizontale */
+    display: flex;
+    max-width: 400px;
+}
+.card img {
+    border-radius: 50%;
+    max-width: 100px;
+    margin-right: 10px;
+    height: 100px;
+    object-fit: cover;
+}
+.cards-container {
+    display: flex;
+    justify-content: center; /* Centrer les cartes horizontalement */
+    flex-wrap: wrap;
+}
+
+.contact-banner {
+    background: rgba(198, 206, 195, 1);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 20px; /* Espace entre le bandeau du formulaire et le contenu précédent */
+}
+
+.contact-form {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #aee783;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #aee783;
+}
+
+form { max-width:420px; margin:15px auto; }
+
+.feedback-input {
+    color:white;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #849679;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.feedback-input:focus { border:2px solid #aee783; }
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+[type="submit"] {
+    width: 100%;
+    background: #94b771;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:grey;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:500;
+}
+[type="submit"]:hover { background:#aee783; }
+
+.infos {
+    display: flex;
+    align-items: center;
+}
+
+.infos > img {
+    max-height: 100px;
+    margin-right: 25px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Ajoutez une marge entre chaque paire image-texte si nécessaire */
+}
+
+.arrow-icon {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.collapse-container.active #arrow-icon {
+    transform: rotate(90deg);
+}
+.contact-link {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #75945e; /* Couleur de survol */
+}
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777; /* Couleur du texte de copyright */
+    margin-top: 20px;
+}
+
+.separator {
+    width: 10%;
+    border: solid 1px lightgray;
+    margin: 15px auto;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgdoc {
+        margin-bottom: 15px;
+    }
+
+    .infos > img {
+        max-height: 60px;
+    }
+}
