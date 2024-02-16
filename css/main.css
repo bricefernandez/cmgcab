@@ -224,6 +224,10 @@ textarea {
     margin: 15px auto;
 }
 
+.imgdoc {
+    min-width: 100px;
+}
+
 @media screen and (max-width: 992px) {
     .card {
         flex-direction: column;
