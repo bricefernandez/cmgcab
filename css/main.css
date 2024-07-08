@@ -218,6 +218,11 @@ textarea {
     transition: color 0.3s;
 }
 
+.contact-phone-black {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
 .copyright {
     text-align: center;
     font-size: 14px;
