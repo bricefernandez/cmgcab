@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <title>Cabinet dentaire CMG et associés</title>
 </head>
 
@@ -15,27 +16,19 @@
         </div>
         <h1>Cabinet Dentaire CMG & associés</h1>
         <br/>
-        <h2><img src="images/clock.png" style="max-height: 18px;"> En formation <img src="images/clock.png" style="max-height: 18px;"></h2>
     </header>
     <div class="container">
         <div class="infos">
             <img src="images/building.png">
             <p>
-                Les Docteurs <b>Martini</b> et <b>Grasset</b> sont heureux de vous retrouver prochainement dans leur nouveau cabinet dentaire qui devrait voir le jour <b>courant  2024</b> !
+                Les Docteurs <b>Martini Claire</b> et <b>Grasset Matthieu</b> sont heureux de vous retrouver dans leur nouveau cabinet dentaire à partir du <b>Jeudi 11 Juillet 2024</b> !<br/><br/>Retrouvez nous dans nos nouveaux locaux, au <b>831 chemin des plantades, 83130 La Garde</b>. Vous trouverez le point GPS exact sur la <a href="#map">carte ci-dessous</a>.
             </p>
-        </div>
-        <div class="separator"></div>
-        <div class="infos">
-            <p>
-                Actuellement en <b>congé maternité</b>, le Docteur Martini pouponne et sera de retour pour l'ouverture du nouveau cabinet. Vous pouvez néanmoins la <a href="mailto:drmartiniclaire@gmail.com">contacter par mail</a> pour toute demande, elle reste joignable.
-            </p>
-            <img src="images/pregnant.png">
         </div>
         <div class="separator"></div>
         <div class="infos">
             <img src="images/doctolib.png" style="border-radius: 50%">
             <p>
-                La <b>prise de rendez-vous est possible</b> avec le Docteur Grasset en vous rendant sur sa <a href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">page Doctolib</a> ci-dessous (en cas de besoin les patients du Docteur Martini sont les bienvenus).            </p>
+                La <b>prise de rendez-vous est possible</b> sur <b>Doctolib</b> ou par téléphone en joignant notre secrétariat au : <img src="images/phone.png" style="max-height: 18px;"> <b>04 94 90 21 65</b></p>
         </div>
         <br>
         <div class="cards-container">
@@ -84,6 +77,10 @@
                         <img src="images/email.png" style="max-height: 18px;">
                         drmartiniclaire@gmail.com
                     </div>
+                    <div class="info-container">
+                        <img src="images/doctolib.png" style="max-height: 18px;">
+                        <a href="https://www.doctolib.fr/dentiste/toulon/claire-martini" target="_blank">Lien Doctolib</a>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -121,24 +118,31 @@
                         <img src="images/phone.png" style="max-height: 18px;">
                         04 94 92 61 41
                     </div>
+                    <div class="info-container">
+                        <img src="images/doctolib.png" style="max-height: 18px;">
+                        <a href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">Lien Doctolib</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="separator"></div>
+        <div class="map-container">
+            <div id="map"></div>
         </div>
     </div>
     <footer>
         <h2 style="margin-bottom: 0;">Restons en contact !</h2>
         <div class="container">
-            <a class="contact-link" href="mailto:drmartiniclaire@gmail.com">
-                <img src="images/email.png" style="max-height: 18px;"> Contacter le Dr. Martini
+            <a class="contact-link" href="mailto:cmgassocies@gmail.com">
+                <img src="images/email.png" style="max-height: 18px;"> Par email en <u>cliquant ici</u>
             </a>
-            <a class="contact-link" href="mailto:gmcabinetdentaire@gmail.com">
-                <img src="images/email.png" style="max-height: 18px;"> Contacter le Dr. Grasset
-            </a>
+            <p><img src="images/phone.png" style="max-height: 18px;"> Par téléphone au  <a class="contact-phone" href="tel:0494902165"><b><u>04 94 90 21 65</u></b></a></p>
             <br/>
             <p class="copyright">© 2023 Cabinet Dentaire CMG & associés - Réalisé par Brice Fernandez</p>
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
     function toggleDiplomas(cardElement) {
         var diplomas = cardElement.parentNode.querySelector(".js-diplomas");
@@ -155,5 +159,25 @@
             collapseContainer.classList.remove("active");
         }
     }
+    // Initialisation de la carte
+    var map = L.map('map').setView([43.142356, 6.024142], 13); // Paris coordinates
+
+    // Ajouter une couche de tuiles (tiles) à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Ajouter un marqueur à la position des coordonnées GPS
+    var marker = L.marker([43.142356, 6.024142]).addTo(map);
+
+    // Ajouter une info-bulle avec des liens pour l'itinéraire
+    var popupContent = `
+            <div class="custom-popup">
+                <b>La Garde, France</b><br>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=43.142356,6.024142" target="_blank">Itinéraire avec Google Maps</a>
+                <a href="https://waze.com/ul?ll=43.142356,6.024142&navigate=yes" target="_blank">Itinéraire avec Waze</a>
+            </div>
+        `;
+    marker.bindPopup(popupContent);
 </script>
 </html>
