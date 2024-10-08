@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #778981;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 132px;
+}
+
+a.logo {
+  margin-left: 0 !important;
+}
+
+.last-link {
+    margin-right: 0 !important;
+}
+
+/* Hero section */
+.hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.navbar, .nav-links {
+    background: var(--primary-color);
+}
+
+.button-primary {
+    background-color: var(--primary-color) !important;
+    border: none !important;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a{
+    float: left;
+    color: #fff;
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links a:not(:first-child):hover {
+    border-bottom: solid 2px lightgrey;
+}
+
+.nav-links a.active:not(:first-child) {
+    border-bottom: solid 2px #fff;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.nav-links .icon{
+    display: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+    /*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+    .nav-links a:not(:first-child){
+        display: none;
+    }
+    /*Brings the menu icon into view and floats it to the right*/
+    .nav-links a.icon{
+        display: block; float: right;
+    }
+
+    /*The nav-links class will be changed to 'nav-links responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+    .nav-links.responsive {
+        position: relative;
+    }
+    .nav-links.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /*Removes the originally set float and brings them to view*/
+    .nav-links.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.specialties {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialties label {
+    text-align: center;
+    color: #fff;
+}
+
+
