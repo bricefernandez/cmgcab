@@ -8,6 +8,10 @@ body {
     background-color: var(--primary-color);
 }
 
+.text-color {
+    color: var(--primary-color);
+}
+
 .bg-white {
     background-color: #ffffff;
 }
@@ -83,6 +87,11 @@ a.logo {
 .button-primary {
     background-color: var(--primary-color) !important;
     border: none !important;
+}
+
+.button-secondary {
+    background-color: transparent !important;
+    border: solid 1px #ffffff !important;
 }
 
 .nav-links {
@@ -169,6 +178,12 @@ a.logo {
     font-weight: 400;
 }
 
+.section-title {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 400;
+}
+
 .office .subtitle {
     color: var(--primary-color);
     font-size: 27px;
@@ -197,4 +212,65 @@ a.logo {
 
 .bg-grey {
     background: lightgray;
+}
+
+.team-card {
+    padding: 310px 70px 0 12px;
+}
+
+.team-card.right {
+    padding: 310px 12px 0 70px;
+}
+
+.info-box-wrapper {
+    position: relative;
+}
+
+.info-box {
+    position: relative;
+    background: #ffffff;
+    padding: 50px 40px;
+    width: 415px;
+    z-index: 1;
+}
+
+.info-box.right {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.info-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info-box h4 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.info-box.right h3 {
+    color: #ffffff;
+}
+
+.info-box.right h4 {
+    color: #ffffff;
+}
+
+.photo-container {
+    position: absolute;
+    top: -450px;
+    left: -90px;
+    height: 517px;
+    width: 293px;
+    background: #ECE4D9;
+}
+
+.photo-container.right {
+    right: -90px;
+    left: auto;
+}
+
+.photo-container img {
+    max-width: 290px;
 }
