@@ -274,3 +274,11 @@ a.logo {
 .photo-container img {
     max-width: 290px;
 }
+
+.cases-container img {
+    max-width: 100%;
+}
+
+.contact-container {
+    border-right: solid 3px var(--primary-color);
+}
