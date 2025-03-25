@@ -12,6 +12,14 @@ body {
     color: var(--primary-color);
 }
 
+.text-white {
+    color: #ffffff;
+}
+
+.filter-invert {
+    filter: invert(1);
+}
+
 .bg-white {
     background-color: #ffffff;
 }
@@ -281,4 +289,28 @@ a.logo {
 
 .contact-container {
     border-right: solid 3px var(--primary-color);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.map-container {
+    padding: 0 10px;
+}
+
+#map {
+    height: 400px;
+    margin-top: 30px;
 }
