@@ -200,7 +200,7 @@ a.logo {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 45px;
     padding: 20px;
 }
@@ -267,9 +267,9 @@ a.logo {
 
 .photo-container {
     position: absolute;
-    top: -450px;
+    top: -372px;
     left: -90px;
-    height: 517px;
+    height: 438px;
     width: 293px;
     background: #ECE4D9;
 }
