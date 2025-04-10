@@ -224,10 +224,12 @@ a.logo {
 
 .team-card {
     padding: 310px 70px 0 12px;
+    justify-content: flex-end;
 }
 
 .team-card.right {
     padding: 310px 12px 0 70px;
+    justify-content: flex-start;
 }
 
 .info-box-wrapper {
@@ -289,6 +291,7 @@ a.logo {
 
 .contact-container {
     border-right: solid 3px var(--primary-color);
+    text-align: center;
 }
 
 .contact-info {
@@ -313,4 +316,56 @@ a.logo {
 #map {
     height: 400px;
     margin-top: 30px;
+}
+
+.round-portrait {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+    .team-card {
+        padding: 15px;
+    }
+
+    .team-card.right {
+        padding: 15px;
+    }
+
+    .photo-container {
+        left: -40px;
+    }
+
+    .photo-container.right {
+        right: -40px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .team-card {
+        justify-content: center;
+    }
+
+    .team-card.right {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        border-right: none;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .section-title {
+        padding-left: 0;
+    }
+
+    .contact-info {
+        margin: 0;
+    }
 }
