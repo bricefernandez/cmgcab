@@ -30,8 +30,17 @@ body {
     justify-content: center;
 }
 
+
 .logo-img {
     height: 132px;
+}
+
+.logo-speciality {
+    height: 100px;
+}
+
+.img-case {
+    border-radius: 6px;
 }
 
 a.logo {
