@@ -1,166 +1,314 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <title>Cabinet Dentaire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-utilities.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <title>Cabinet dentaire CMG et associés</title>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        window.onload = function () {
+            Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+            });
+        };
 
-<body id="top">
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo du cabinet dentaire CMG et associés">
-        </div>
-        <h1>Cabinet Dentaire CMG & associés</h1>
-        <br/>
-    </header>
+        function openDrawerMenu() {
+            var x = document.getElementById("navbar");
+            if (x.className === "navBar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navBar";
+            }
+        }
+    </script>
+</head>
+<body>
+<header class="navbar">
+    <div class="container top">
+        <nav id="navbar" class="nav-links">
+            <a class="logo">
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <a href="#home" class="active">Accueil</a>
+            <a href="#cabinet">Le cabinet</a>
+            <a href="#team">L'équipe</a>
+            <a href="#cases">Avant / Après</a>
+            <a href="#contact" class="last-link">Contact</a>
+            <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero section -->
+<section class="hero" style="background-image: url('images/wallpaper.webp');">
+    <div class="hero-content text-color">
+        <h1>Cabinet Dentaire</h1>
+        <p>CMG & Associés</p>
+        <a href="#contact" class="button button-primary">Prendre rendez-vous</a>
+    </div>
+</section>
+
+<section id="cabinet">
     <div class="container">
-        <div class="infos">
-            <img src="images/building.png">
-            <p>
-                Les Docteurs <b>Martini Claire</b> et <b>Grasset Matthieu</b> sont heureux de vous retrouver dans leur nouveau cabinet dentaire à partir du <b>Jeudi 11 Juillet 2024</b> !<br/><br/>Retrouvez nous dans nos nouveaux locaux, au <b>831 chemin des plantades, 83130 La Garde</b>. Vous trouverez le point GPS exact sur la <a class="black-link" href="#map">carte ci-dessous</a>.
-            </p>
+        <div class="row py-4">
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/chirurgie.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Soins restaurateurs</label>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/soin.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Endodontie</label>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/paro.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Parodontie</label>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/dents5.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Soins esthétiques</label>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/dents01.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Orthodontie</label>
+            </div>
+            <div class="col-6 col-lg-4 col-xl-2 speciality">
+                <img src="images/svg/implantologie.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Implantologie</label>
+            </div>
         </div>
-        <div class="separator"></div>
-        <div class="infos">
-            <img src="images/doctolib.png" style="border-radius: 50%">
-            <p>
-                La <b>prise de rendez-vous est possible</b> sur <b>Doctolib</b> ou par téléphone en joignant notre secrétariat au : <img src="images/phone.png" style="max-height: 18px;"> <b><a class="black-link" href="tel:0494902165"><b><u>04 94 90 21 65</u></b></a></b></p>
+    </div>
+</section>
+<section class="bg-white">
+    <div class="container">
+        <div class="office py-4 d-flex align-items-center">
+            <img class="d-none d-lg-flex" src="images/leafs.png">
+            <div class="title-container">
+                <label class="title text-center">Notre cabinet</label>
+                <label class="subtitle text-center mt-2">Ecoute - Confort - Expertise - Satisfaction</label>
+            </div>
+            <img class="d-none d-lg-flex" src="images/leafs.png">
         </div>
-        <br>
-        <div class="cards-container">
-            <div class="card">
-                <img class="imgdoc" src="images/drmartini.png" alt="Photo du Docteur Claire Martini">
-                <div>
-                    <h2 style="margin-top: 0;">Dr Claire Martini</h2>
-                    <div class="info-container">
-                        <img src="images/tooth.png" style="max-height: 18px;">
-                        Chirurgien dentiste
+        <div class="photos">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="images/photos/cab/CABINETDENTAIRE-127.jpg" data-fancybox="gallery" data-caption="Photo 1">
+                        <img src="images/photos/cab/CABINETDENTAIRE-127.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/photos/cab/CABINETDENTAIRE-172.jpg" data-fancybox="gallery" data-caption="Photo 2">
+                        <img src="images/photos/cab/CABINETDENTAIRE-172.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/photos/action/CABINETDENTAIRE-69.jpg" data-fancybox="gallery" data-caption="Photo 3">
+                        <img src="images/photos/action/CABINETDENTAIRE-69.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/photos/cab/CABINETDENTAIRE-22.jpg" data-fancybox="gallery" data-caption="Photo 4">
+                        <img src="images/photos/cab/CABINETDENTAIRE-22.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/photos/cab/CABINETDENTAIRE-23.jpg" data-fancybox="gallery" data-caption="Photo 5">
+                        <img src="images/photos/cab/CABINETDENTAIRE-23.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="images/photos/cab/CABINETDENTAIRE-103.jpg" data-fancybox="gallery" data-caption="Photo 6">
+                        <img src="images/photos/cab/CABINETDENTAIRE-103.jpg"/>
+                    </a>
+                </div>
+                <div class="grid-item d-none">
+                    <a href="images/photos/cab/CABINETDENTAIRE-104.jpg" data-fancybox="gallery" data-caption="Photo 7">
+                        <img src="images/photos/cab/CABINETDENTAIRE-104.jpg"/>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br/>
+    <h2 id="team" class="col-12 text-center section-title">L'équipe</h2>
+    <br/>
+    <br/>
+</section>
+<section class="bg-grey pt-5 pb-5">
+    <div class="container">
+        <div class="row infos-container">
+            <!-- Dr Claire Martini -->
+            <div class="col-lg-6 team-card d-flex">
+                <div class="info-box-wrapper">
+                    <div class="info-box">
+                        <div class="d-flex d-xl-none justify-content-center align-items-center mb-4">
+                            <img class="img-responsive round-portrait" src="images/photos/portraits/CABINETDENTAIRE-135-small.png" alt="Dr Claire Martini">
+                        </div>
+                        <h3 class="text-color">Dr Claire Martini</h3>
+                        <h4 class="text-color">Chirurgien dentiste</h4>
+                        <br>
+                        <div>Diplomée de la faculté de Marseille</div>
+                        <div>Formation Laser 2022/2023 - Gérard Rey</div>
+                        <div>Injection Acide Hyaluronique - Biotech Dental</div>
+                        <div>Invisalign GO - Align Technology</div>
+                        <div>CESU Pratique de l'occlusodontie</div>
+                        <div>Attestation Universitaire en Implantologie Orale</div>
+                        <br>
+                        <div class="email">drmartiniclaire@gmail.com</div>
+                        <br>
+                        <a href="#contact" class="button button-primary">Prendre rendez-vous sur Doctolib</a>
                     </div>
-                    <div class="info-container">
-                        <img src="images/graduated.png" style="max-height: 18px;">
-                        Diplomée de la faculté de Marseille
+                    <div class="photo-container justify-content-center align-items-center d-none d-xl-flex">
+                        <img class="img-responsive" src="images/photos/portraits/CABINETDENTAIRE-134.jpg" alt="Dr Claire Martini">
                     </div>
-                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
-                        <img src="images/graduated.png" style="max-height: 18px;">
-                        Formation Laser 2022/2023 - Gérard Rey
+                </div>
+            </div>
+
+            <!-- Dr Matthieu Grasset -->
+            <div class="col-lg-6 team-card right d-flex">
+                <div class="info-box-wrapper">
+                    <div class="info-box right">
+                        <div class="d-flex d-xl-none justify-content-center align-items-center mb-4">
+                            <img class="img-responsive round-portrait" src="images/photos/portraits/CABINETDENTAIRE-166-small.jpg" alt="Dr Claire Martini">
+                        </div>
+                        <h3 class="text-color">Dr Claire Martini</h3>
+                        <h4 class="text-color">Chirurgien dentiste</h4>
+                        <br>
+                        <div>Diplomée de la faculté de Marseille</div>
+                        <div>Formation Laser 2022/2023 - Gérard Rey</div>
+                        <div>Injection Acide Hyaluronique - Biotech Dental</div>
+                        <div>Invisalign GO - Align Technology</div>
+                        <div>CESU Pratique de l'occlusodontie</div>
+                        <div>Attestation Universitaire en Implantologie Orale</div>
+                        <br>
+                        <div class="email">drmartiniclaire@gmail.com</div>
+                        <br>
+                        <a href="#contact   " class="button button-secondary">Prendre rendez-vous sur Doctolib</a>
                     </div>
-                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
-                        <img src="images/graduated.png" style="max-height: 18px;">
-                        Autres diplomes&nbsp;&nbsp;
-                        <img src="images/arrow.png" class="js-arrow-icon" style="max-height: 18px;">
+                    <div class="photo-container right justify-content-center align-items-center d-none d-xl-flex">
+                        <img class="img-responsive" src="images/photos/portraits/CABINETDENTAIRE-166.jpg" alt="Dr Matthieu Grasset">
                     </div>
-                    <div class="js-diplomas" style="display: none;">
-                        <div class="info-container">
-                            <div style="height: 18px; width: 18px; margin-right: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="cases" class="bg-white pt-5 pb-5">
+    <div class="container">
+        <div class="row infos-container">
+            <h2 class="col-12 text-center section-title">Avant / Après</h2>
+            <div id="casesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <!-- Première slide -->
+                    <div class="carousel-item active">
+                        <h5 class="text-center text-color">Alignement dentaire & restaurations directes composites</h5>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/before1.png" alt="Avant">
                             </div>
-                            <ul style="margin: 0; padding-left: 25px;">
-                                <li>
-                                    Injection Acide Hyaluronique - Biotech Dental
-                                </li>
-                                <li>
-                                    Invisalign GO - Align Technology
-                                </li>
-                                <li>
-                                    CESU Pratique de l'occlusodontie
-                                </li>
-                                <li>
-                                    Attestation Universitaire en Implantologie Orale
-                                </li>
-                            </ul>
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/after1.png" alt="Après">
+                            </div>
                         </div>
                     </div>
-                    <div class="info-container">
-                        <img src="images/email.png" style="max-height: 18px;">
-                        drmartiniclaire@gmail.com
+
+                    <!-- Deuxième slide -->
+                    <div class="carousel-item">
+                        <h5 class="text-center text-color">Accident de trottinette : restaurations directes composites</h5>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/before2.png" alt="Avant">
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/after2.png" alt="Après">
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-container">
-                        <img src="images/doctolib.png" style="max-height: 18px;">
-                        <a class="black-link" href="https://www.doctolib.fr/dentiste/toulon/claire-martini" target="_blank">Lien Doctolib</a>
+
+                    <!-- Troisième slide -->
+                    <div class="carousel-item">
+                        <h5 class="text-center text-color">Couronne & facettes céramique</h5>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/before3.png" alt="Avant">
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-responsive img-case" src="images/cases/after3.png" alt="Après">
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Contrôles du slider -->
+                <a class="carousel-control-prev" href="#casesCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#casesCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
             </div>
-            <div class="card">
-                <img class="imgdoc" src="images/drgrasset.png" alt="Photo du Dr Matthieu Grasset">
-                <div>
-                    <h2 style="margin-top: 0;">Dr Matthieu Grasset</h2>
-                    <div class="info-container">
-                        <img src="images/tooth.png" style="max-height: 18px;">
-                        Chirurgien dentiste
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-grey pt-5 pb-5">
+    <div class="container text-color">
+        <div class="row">
+            <div class="col-12 col-md-6 contact-container">
+                <h2 class="col-12 section-title">Contact</h2>
+                <div class="text-color"><strong>Cabinet dentaire</strong></div>
+                <div class="text-color"><strong>CMG & associés</strong></div>
+            </div>
+            <div class="col-12 col-md-6 d-flex">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot fa-xl"></i>
+                        <span>831 chemin des plantades</span>
                     </div>
-                    <div class="info-container">
-                        <img src="images/graduated.png" style="max-height: 18px;">
-                        Diplome d'études supérieures universitaires en endodontie - Aix-marseille université 2021-2022
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope fa-xl"></i>
+                        <span>cmgassocies@gmail.com</span>
                     </div>
-                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
-                        <img src="images/graduated.png" style="max-height: 18px;">
-                        Formation Laser 2022/2023 - Gérard Rey
-                    </div>
-<!--                    <div class="js-diplomas" style="display: none;">-->
-<!--                        <div class="info-container">-->
-<!--                            <div style="height: 18px; width: 18px; margin-right: 20px;">-->
-<!--                            </div>-->
-<!--                            <ul style="margin: 0; padding-left: 25px;">-->
-<!--                                <li>-->
-<!--                                    Formation Laser 2022/2023 - Gérard Rey-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="info-container">
-                        <img src="images/email.png" style="max-height: 18px;">
-                        gmcabinetdentaire@gmail.com
-                    </div>
-                    <div class="info-container">
-                        <img src="images/phone.png" style="max-height: 18px;">
-                        04 94 92 61 41
-                    </div>
-                    <div class="info-container">
-                        <img src="images/doctolib.png" style="max-height: 18px;">
-                        <a class="black-link" href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">Lien Doctolib</a>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone fa-xl"></i>
+                        <span>04 94 90 21 65</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="separator"></div>
         <div class="map-container">
             <div id="map"></div>
         </div>
     </div>
-    <footer>
-        <h2 style="margin-bottom: 0;">Restons en contact !</h2>
-        <div class="container">
-            <a class="contact-link" href="mailto:cmgassocies@gmail.com">
-                <img src="images/email.png" style="max-height: 18px;"> Par email en <u>cliquant ici</u>
-            </a>
-            <p><img src="images/phone.png" style="max-height: 18px;"> Par téléphone au  <a class="contact-phone" href="tel:0494902165"><b><u>04 94 90 21 65</u></b></a></p>
-            <br/>
-            <p class="copyright">© 2023 Cabinet Dentaire CMG & associés - Réalisé par Brice Fernandez</p>
-        </div>
-    </footer>
-</body>
+</section>
+
+
+<section class="pt-5 pb-5">
+    <div class="container text-white text-center">
+        © 2024 Cabinet Dentaire CMG & associés - Design Lucie Ballenghein - Réalisé par Brice Fernandez
+    </div>
+</section>
+
+<script src="script.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-    function toggleDiplomas(cardElement) {
-        var diplomas = cardElement.parentNode.querySelector(".js-diplomas");
-        var arrowIcon = cardElement.parentNode.querySelector(".js-arrow-icon");
-        var collapseContainer = cardElement.parentNode.querySelector(".collapse-container");
-
-        if (diplomas.style.display === "none" || diplomas.style.display === "") {
-            diplomas.style.display = "block";
-            arrowIcon.style.transform = "rotate(180deg)";
-            collapseContainer.classList.add("active");
-        } else {
-            diplomas.style.display = "none";
-            arrowIcon.style.transform = "rotate(0deg)";
-            collapseContainer.classList.remove("active");
-        }
-    }
     // Initialisation de la carte
-    var map = L.map('map').setView([43.142356, 6.024142], 13); // Paris coordinates
+    var map = L.map('map').setView([43.142356, 6.024142], 13);
 
     // Ajouter une couche de tuiles (tiles) à la carte
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -180,4 +328,5 @@
         `;
     marker.bindPopup(popupContent);
 </script>
+</body>
 </html>

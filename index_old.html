@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main_old.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Cabinet dentaire CMG et associés</title>
+</head>
+
+<body id="top">
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo du cabinet dentaire CMG et associés">
+        </div>
+        <h1>Cabinet Dentaire CMG & associés</h1>
+        <br/>
+    </header>
+    <div class="container">
+        <div class="infos">
+            <img src="images/building.png">
+            <p>
+                Les Docteurs <b>Martini Claire</b> et <b>Grasset Matthieu</b> sont heureux de vous retrouver dans leur nouveau cabinet dentaire à partir du <b>Jeudi 11 Juillet 2024</b> !<br/><br/>Retrouvez nous dans nos nouveaux locaux, au <b>831 chemin des plantades, 83130 La Garde</b>. Vous trouverez le point GPS exact sur la <a class="black-link" href="#map">carte ci-dessous</a>.
+            </p>
+        </div>
+        <div class="separator"></div>
+        <div class="infos">
+            <img src="images/doctolib.png" style="border-radius: 50%">
+            <p>
+                La <b>prise de rendez-vous est possible</b> sur <b>Doctolib</b> ou par téléphone en joignant notre secrétariat au : <img src="images/phone.png" style="max-height: 18px;"> <b><a class="black-link" href="tel:0494902165"><b><u>04 94 90 21 65</u></b></a></b></p>
+        </div>
+        <br>
+        <div class="cards-container">
+            <div class="card">
+                <img class="imgdoc" src="images/drmartini.png" alt="Photo du Docteur Claire Martini">
+                <div>
+                    <h2 style="margin-top: 0;">Dr Claire Martini</h2>
+                    <div class="info-container">
+                        <img src="images/tooth.png" style="max-height: 18px;">
+                        Chirurgien dentiste
+                    </div>
+                    <div class="info-container">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Diplomée de la faculté de Marseille
+                    </div>
+                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Formation Laser 2022/2023 - Gérard Rey
+                    </div>
+                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Autres diplomes&nbsp;&nbsp;
+                        <img src="images/arrow.png" class="js-arrow-icon" style="max-height: 18px;">
+                    </div>
+                    <div class="js-diplomas" style="display: none;">
+                        <div class="info-container">
+                            <div style="height: 18px; width: 18px; margin-right: 20px;">
+                            </div>
+                            <ul style="margin: 0; padding-left: 25px;">
+                                <li>
+                                    Injection Acide Hyaluronique - Biotech Dental
+                                </li>
+                                <li>
+                                    Invisalign GO - Align Technology
+                                </li>
+                                <li>
+                                    CESU Pratique de l'occlusodontie
+                                </li>
+                                <li>
+                                    Attestation Universitaire en Implantologie Orale
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <img src="images/email.png" style="max-height: 18px;">
+                        drmartiniclaire@gmail.com
+                    </div>
+                    <div class="info-container">
+                        <img src="images/doctolib.png" style="max-height: 18px;">
+                        <a class="black-link" href="https://www.doctolib.fr/dentiste/toulon/claire-martini" target="_blank">Lien Doctolib</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="imgdoc" src="images/drgrasset.png" alt="Photo du Dr Matthieu Grasset">
+                <div>
+                    <h2 style="margin-top: 0;">Dr Matthieu Grasset</h2>
+                    <div class="info-container">
+                        <img src="images/tooth.png" style="max-height: 18px;">
+                        Chirurgien dentiste
+                    </div>
+                    <div class="info-container">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Diplome d'études supérieures universitaires en endodontie - Aix-marseille université 2021-2022
+                    </div>
+                    <div class="info-container collapse-container" onclick="toggleDiplomas(this)">
+                        <img src="images/graduated.png" style="max-height: 18px;">
+                        Formation Laser 2022/2023 - Gérard Rey
+                    </div>
+<!--                    <div class="js-diplomas" style="display: none;">-->
+<!--                        <div class="info-container">-->
+<!--                            <div style="height: 18px; width: 18px; margin-right: 20px;">-->
+<!--                            </div>-->
+<!--                            <ul style="margin: 0; padding-left: 25px;">-->
+<!--                                <li>-->
+<!--                                    Formation Laser 2022/2023 - Gérard Rey-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="info-container">
+                        <img src="images/email.png" style="max-height: 18px;">
+                        gmcabinetdentaire@gmail.com
+                    </div>
+                    <div class="info-container">
+                        <img src="images/phone.png" style="max-height: 18px;">
+                        04 94 92 61 41
+                    </div>
+                    <div class="info-container">
+                        <img src="images/doctolib.png" style="max-height: 18px;">
+                        <a class="black-link" href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank">Lien Doctolib</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+    <footer>
+        <h2 style="margin-bottom: 0;">Restons en contact !</h2>
+        <div class="container">
+            <a class="contact-link" href="mailto:cmgassocies@gmail.com">
+                <img src="images/email.png" style="max-height: 18px;"> Par email en <u>cliquant ici</u>
+            </a>
+            <p><img src="images/phone.png" style="max-height: 18px;"> Par téléphone au  <a class="contact-phone" href="tel:0494902165"><b><u>04 94 90 21 65</u></b></a></p>
+            <br/>
+            <p class="copyright">© 2023 Cabinet Dentaire CMG & associés - Réalisé par Brice Fernandez</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    function toggleDiplomas(cardElement) {
+        var diplomas = cardElement.parentNode.querySelector(".js-diplomas");
+        var arrowIcon = cardElement.parentNode.querySelector(".js-arrow-icon");
+        var collapseContainer = cardElement.parentNode.querySelector(".collapse-container");
+
+        if (diplomas.style.display === "none" || diplomas.style.display === "") {
+            diplomas.style.display = "block";
+            arrowIcon.style.transform = "rotate(180deg)";
+            collapseContainer.classList.add("active");
+        } else {
+            diplomas.style.display = "none";
+            arrowIcon.style.transform = "rotate(0deg)";
+            collapseContainer.classList.remove("active");
+        }
+    }
+    // Initialisation de la carte
+    var map = L.map('map').setView([43.142356, 6.024142], 13); // Paris coordinates
+
+    // Ajouter une couche de tuiles (tiles) à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Ajouter un marqueur à la position des coordonnées GPS
+    var marker = L.marker([43.142356, 6.024142]).addTo(map);
+
+    // Ajouter une info-bulle avec des liens pour l'itinéraire
+    var popupContent = `
+            <div class="custom-popup">
+                <b>La Garde, France</b><br>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=43.142356,6.024142" target="_blank">Itinéraire avec Google Maps</a>
+                <a href="https://waze.com/ul?ll=43.142356,6.024142&navigate=yes" target="_blank">Itinéraire avec Waze</a>
+            </div>
+        `;
+    marker.bindPopup(popupContent);
+</script>
+</html>
