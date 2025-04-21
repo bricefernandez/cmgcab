@@ -237,12 +237,12 @@ a.logo {
 }
 
 .team-card {
-    padding: 310px 70px 0 12px;
+    padding: 185px 50px 0 12px;
     justify-content: flex-end;
 }
 
 .team-card.right {
-    padding: 310px 12px 0 70px;
+    padding: 185px 12px 0 50px;
     justify-content: flex-start;
 }
 
@@ -253,7 +253,8 @@ a.logo {
 .info-box {
     position: relative;
     background: #ffffff;
-    padding: 50px 40px;
+    padding: 35px;
+    border-radius: 4px;
     width: 415px;
     z-index: 1;
 }
@@ -283,10 +284,8 @@ a.logo {
 
 .photo-container {
     position: absolute;
-    top: -372px;
+    top: -292px;
     left: -90px;
-    height: 438px;
-    width: 293px;
     background: #ECE4D9;
 }
 
@@ -296,7 +295,7 @@ a.logo {
 }
 
 .photo-container img {
-    max-width: 290px;
+    max-width: 230px;
 }
 
 .cases-container img {
@@ -389,7 +388,9 @@ a.logo {
     color: #fff;
 }
 
-
+a.button:hover {
+    color: #bbbbbb;
+}
 
 @media screen and (max-width: 1200px) {
     .team-card {
