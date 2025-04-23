@@ -47,16 +47,18 @@
 <body>
 <header class="navbar">
     <div class="container top">
-        <nav id="navbar" class="nav-links">
+        <nav id="navbar" class="nav-links d-flex align-items-center justify-content-between w-100">
             <a class="logo">
                 <img src="images/logo.png" alt="Logo" class="logo-img">
             </a>
-            <a href="#home" class="active">Accueil</a>
-            <a href="#cabinet">Le cabinet</a>
-            <a href="#team">L'équipe</a>
-            <a href="#cases">Avant / Après</a>
-            <a href="#contact" class="last-link">Contact</a>
-            <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+            <div class="nav-center d-none d-md-flex">
+                <a href="#home" class="active">Accueil</a>
+                <a href="#cabinet">Le cabinet</a>
+                <a href="#team">L'équipe</a>
+                <a href="#cases">Avant / Après</a>
+                <a href="#contact" class="last-link">Contact</a>
+            </div>
+            <a href="javascript:void(0);" class="icon d-md-none" onClick="openDrawerMenu()">&#9776;</a>
         </nav>
     </div>
 </header>
@@ -66,34 +68,34 @@
     <div class="hero-content text-color">
         <h1>Cabinet Dentaire</h1>
         <p>CMG & Associés</p>
-        <a href="#contact" class="button button-primary">Prendre rendez-vous</a>
+        <a href="#contact" class="button button-primary" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">Prendre rendez-vous</a>
     </div>
 </section>
 
 <section id="cabinet">
     <div class="container">
         <div class="row py-2">
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
                 <img src="images/svg/chirurgie.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Soins restaurateurs</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
                 <img src="images/svg/soin.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Endodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
                 <img src="images/svg/paro.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Parodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
                 <img src="images/svg/dents5.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Soins esthétiques</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
                 <img src="images/svg/dents01.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Orthodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
                 <img src="images/svg/implantologie.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Implantologie</label>
             </div>
@@ -375,18 +377,18 @@
 
             </div>
         </div>
+        <br>
+        <h2 id="team" class="col-12 text-center section-title">L'équipe</h2>
+        <br>
+        <br>
     </div>
-    <br/>
-    <h2 id="team" class="col-12 text-center section-title">L'équipe</h2>
-    <br/>
-    <br/>
 </section>
 <section class="bg-grey pt-5 pb-5">
     <div class="container">
         <div class="row infos-container">
             <!-- Dr Claire Martini -->
-            <div class="col-lg-6 team-card d-flex">
-                <div class="info-box-wrapper">
+            <div class="col-12 col-lg-6 team-card d-flex">
+                <div class="info-box-wrapper" data-aos="fade-right" data-aos-duration="1000">
                     <div class="info-box">
                         <div class="d-flex d-xl-none justify-content-center align-items-center mb-4">
                             <img class="img-responsive round-portrait" src="images/photos/CABINETDENTAIRE-135-small.png"
@@ -406,7 +408,7 @@
                         <br>
                         <div class="d-flex justify-content-center">
                             <a href="https://www.doctolib.fr/dentiste/toulon/claire-martini?pid=practice-597314"
-                               target="_blank" class="button button-primary">Prendre rendez-vous sur Doctolib</a>
+                               target="_blank" class="button button-primary">Prendre rendez-vous</a>
                         </div>
                     </div>
                     <div class="photo-container justify-content-center align-items-center d-none d-xl-flex">
@@ -416,8 +418,8 @@
             </div>
 
             <!-- Dr Matthieu Grasset -->
-            <div class="col-lg-6 team-card right d-flex">
-                <div class="info-box-wrapper">
+            <div class="col-12 col-lg-6 team-card right d-flex">
+                <div class="info-box-wrapper" data-aos="fade-left" data-aos-duration="1000">
                     <div class="info-box right">
                         <div class="d-flex d-xl-none justify-content-center align-items-center mb-4">
                             <img class="img-responsive round-portrait" src="images/photos/CABINETDENTAIRE-169-small.jpg"
@@ -437,7 +439,7 @@
                         <br>
                         <div class="d-flex justify-content-center">
                             <a href="https://www.doctolib.fr/dentiste/toulon/mathieu-grasset" target="_blank"
-                               class="button button-secondary">Prendre rendez-vous sur Doctolib</a>
+                               class="button button-secondary">Prendre rendez-vous</a>
                         </div>
                     </div>
                     <div class="photo-container right justify-content-center align-items-center d-none d-xl-flex">
@@ -453,7 +455,7 @@
                     <div class="col-6 col-md-4 col-lg-3">
                         <a href="https://www.doctolib.fr/dentiste/la-garde/maxime-unia-1922a1ed-e0d0-4b2a-86a3-dce89b31f98a?pid=practice-597314"
                            target="_blank" class="employee-card-link">
-                            <div class="employee-card text-center">
+                            <div class="employee-card text-center" data-aos="fade-right" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-146.jpg" alt="Dr Maxime Unia">
                                 </div>
@@ -463,9 +465,8 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="https://www.doctolib.fr/dentiste/la-garde/marine-rosello" target="_blank"
-                           class="employee-card-link">
-                            <div class="employee-card text-center">
+                        <a href="https://www.doctolib.fr/dentiste/la-garde/marine-rosello" target="_blank" class="employee-card-link">
+                            <div class="employee-card text-center" data-aos="fade-right" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-160.jpg" alt="Dr Marine Rosello">
                                 </div>
@@ -478,7 +479,7 @@
                         <a href="https://www.doctolib.fr/dentiste/la-garde/marylou-pepino-2950755c-5a8d-46a0-815a-8782717d81f2"
                            target="_blank"
                            class="employee-card-link">
-                            <div class="employee-card text-center">
+                            <div class="employee-card text-center" data-aos="fade-left" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-136.jpg" alt="Dr Marylou Pepino">
                                 </div>
@@ -489,7 +490,7 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
                         <a href="https://www.doctolib.fr/dentiste/la-garde/julien-grasset" target="_blank" class="employee-card-link">
-                            <div class="employee-card text-center">
+                            <div class="employee-card text-center" data-aos="fade-left" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-152.jpg" alt="Dr Julien Grasset">
                                 </div>
@@ -738,11 +739,11 @@
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-envelope fa-xl"></i>
-                        <span>cmgassocies@gmail.com</span>
+                        <a href="mailto:cmgassocies@gmail.com" class="text-color">cmgassocies@gmail.com</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
                         <i class="fa-solid fa-phone fa-xl"></i>
-                        <span>04 94 90 21 65</span>
+                        <a href="tel:0494902165" class="text-color">04 94 90 21 65</a>
                     </div>
                 </div>
             </div>

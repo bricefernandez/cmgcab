@@ -74,22 +74,6 @@ a.logo {
 .hero-content {
     padding: 20px;
 }
-.hero-content h1 {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid var(--primary-color);
-    animation: typing .5s steps(30, end), blink 0.5s step-end infinite alternate;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    from { border-color: transparent; }
-    to { border-color: var(--primary-color); }
-}
 
 .hero h1 {
     font-size: 48px;
@@ -148,6 +132,10 @@ a.logo {
     align-items: center;
 }
 
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
 .nav-links a{
     float: left;
     color: #fff;
@@ -168,6 +156,40 @@ a.logo {
 .nav-links .icon{
     display: none;
 }
+
+.nav-center {
+    display: flex;
+    /*gap: 25px;*/
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navBar .logo {
+    flex-shrink: 0;
+}
+
+.navBar .icon {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-center {
+        display: none;
+    }
+
+    .navBar.responsive .nav-center {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+    }
+}
+
 
 /*Set your custom screen width here replacing 700*/
 @media (max-width: 700px){
@@ -358,6 +380,10 @@ a.logo {
     font-size: 16px;
 }
 
+.contact-item a:hover {
+    color: var(--secondary-color);
+}
+
 .map-container {
     padding: 0 10px;
 }
@@ -436,7 +462,7 @@ a.logo {
 }
 
 a.button:hover {
-    color: #bbbbbb;
+    color: var(--secondary-color);
 }
 
 #loader {
@@ -509,5 +535,13 @@ a.button:hover {
 
     .contact-info {
         margin: 0;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .team-card {
+        padding-right: 0 !important;
     }
 }
