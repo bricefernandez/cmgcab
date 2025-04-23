@@ -1,11 +1,12 @@
 :root {
     --primary-color: #778981;
+    --secondary-color: #B5825C;
 }
 
 body {
     margin: 0;
     font-family: "Roboto Light", sans-serif;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
 }
 
 .text-color {
@@ -67,10 +68,27 @@ a.logo {
     text-align: center;
     color: #fff;
     position: relative;
+    background-attachment: fixed;
 }
 
 .hero-content {
     padding: 20px;
+}
+.hero-content h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: typing .5s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: var(--primary-color); }
 }
 
 .hero h1 {
@@ -114,6 +132,15 @@ a.logo {
 .button-secondary {
     background-color: transparent !important;
     border: solid 1px #ffffff !important;
+}
+
+.button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
 }
 
 .nav-links {
@@ -230,6 +257,15 @@ a.logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.grid-item img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+    filter: blur(2px);
 }
 
 .bg-grey {
@@ -350,6 +386,17 @@ a.logo {
     transform: translateY(-5px);
 }
 
+.employee-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.employee-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .employee-photo {
     width: 120px;
     height: 120px;
@@ -390,6 +437,33 @@ a.logo {
 
 a.button:hover {
     color: #bbbbbb;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 1200px) {
