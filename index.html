@@ -20,6 +20,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const specialityModal = document.getElementById('specialityModal');
+            const modalTitle = document.getElementById('specialityModalLabel');
+            const modalContent = document.getElementById('specialityModalContent');
+
+            specialityModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget; // Bouton qui a déclenché la modal
+                const title = button.getAttribute('data-title');
+                const content = button.getAttribute('data-content');
+                const image = button.getAttribute('data-image');
+
+                // Mettre à jour le titre, le contenu et l'image de la modal
+                modalContent.innerHTML = `
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="${image}" alt="${title}" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="d-flex flex-row justify-content-between align-items-center mb-4">
+                            <h3 class="modal-title">${title}</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <p>${content}</p>
+                    </div>
+                </div>
+            `;
+            });
+        });
+
+
         window.onload = function () {
             Fancybox.bind("[data-fancybox]", {
                 // Your custom options
@@ -39,7 +69,7 @@
             AOS.init();
         });
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             document.getElementById('loader').style.display = 'none';
         });
     </script>
@@ -68,36 +98,67 @@
     <div class="hero-content text-color">
         <h1>Cabinet Dentaire</h1>
         <p>CMG & Associés</p>
-        <a href="#contact" class="button button-primary" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">Prendre rendez-vous</a>
+        <a href="#contact" class="button button-primary" data-aos="zoom-in" data-aos-delay="200"
+           data-aos-duration="1000">Prendre rendez-vous</a>
     </div>
 </section>
 
 <section id="cabinet">
     <div class="container">
-        <div class="row py-2">
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
+        <div class="speciality-container">
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Soins restaurateurs"
+                 data-content="Notre premier objectif est de préserver vos tissus dentaires : grâce à des soins en résine composite dans les cas les plus simples ou par le biais de restaurations indirectes en céramique (Inlay/Onlays) en cas de délabrement plus important. Ces dernières pourront être réalisées en une seule séance, grâce à notre équipement."
+                 data-image="images/specialities/soinsrestau.jpeg">
                 <img src="images/svg/chirurgie.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Soins restaurateurs</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Endodontie"
+                 data-content="Lorsque la vitalité d’une dent n’est plus conservable, il est nécessaire de procéder au nettoyage de la racine. Les dévitalisations se font sous champ opératoire (digue) avec l’aide de localisateur d’apex, pour plus de précisions. En cas de traitement ou retraitement complexe, le soin est réalisé sous microscope opératoire."
+                 data-image="images/specialities/endo.jpg">
                 <img src="images/svg/soin.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Endodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-right" data-aos-duration="1000">
+
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Parodontie"
+                 data-content="Nous traitons les parodontites avec des méthodes minimalement invasives (méthodes ultrasoniques) associées aux LASERS (LASERS diode + photo-biomodulation). Nous vous accompagnons dans l’apprentissage des techniques d’hygiène et assurons un suivi sur le long terme, afin de prévenir toute récidive.<br/><br/>Les greffes de gencives sont également proposées en cas de rétractions."
+                 data-image="images/specialities/paro.jpg">
                 <img src="images/svg/paro.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Parodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
+
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Soins esthétiques"
+                 data-content="Plusieurs disciplines pourront vous être proposées : éclaircissement, alignement dentaire, réaménagement de la gencive, facettes en céramique… Nous travaillons de concert avec notre prothésiste marseillais (laboratoire Corus Platat) pour vous proposer un résultat à la hauteur de vos attentes."
+                 data-image="images/specialities/esthetique.jpg">
                 <img src="images/svg/dents5.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Soins esthétiques</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
+
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Orthodontie"
+                 data-content="Nous réalisons les traitements orthodontiques de l’adulte lorsqu’ils sont simples voire modérés grâce à un système d’aligneurs transparents."
+                 data-image="images/specialities/ortho.jpg">
                 <img src="images/svg/dents01.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Orthodontie</label>
             </div>
-            <div class="col-6 col-lg-4 col-xl-2 speciality" data-aos="fade-up-left" data-aos-duration="1000">
+
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Implantologie"
+                 data-content="Notre cabinet est équipé d’une salle de chirurgie pour la pose des implants pour remplacer vos dents lorsqu’elles ont été extraites. Pose d’un implant simple, implants multiples, greffe osseuse, appareils complets sur implants… Nous sommes en mesure de gérer toutes ces situations.<br/><br/>Nous réalisons également les extractions des dents de sagesse sous anesthésie locale.<br/><br/>Afin de minimiser les réactions inflammatoires et d’accélérer la cicatrisation, un appareil de photo-biomodulation est à votre disposition. Et pour les plus anxieux, le système de sédation consciente (MEOPA) pourra être mis en place."
+                 data-image="images/specialities/implanto.jpg">
                 <img src="images/svg/implantologie.svg" alt="Logo" class="logo-speciality filter-invert">
                 <label>Implantologie</label>
+            </div>
+
+            <div class="speciality" data-bs-toggle="modal" data-bs-target="#specialityModal"
+                 data-title="Pédodontie"
+                 data-content="Nous recevons vos enfants avec grand plaisir ! Pour les plus craintifs d’entre eux, le système de sédation consciente (MEOPA) pourra être mis en place."
+                 data-image="images/specialities/pedodontie.jpg">
+                <img src="images/svg/pedodontie.svg" alt="Logo" class="logo-speciality filter-invert">
+                <label>Pédodontie</label>
             </div>
         </div>
     </div>
@@ -111,6 +172,15 @@
                 <label class="subtitle text-center mt-2">Ecoute - Confort - Expertise - Satisfaction</label>
             </div>
             <img class="d-none d-lg-flex" src="images/leafs.png">
+        </div>
+        <div class="text-color mb-4">
+            Toute l’équipe du cabinet dentaire CMG &amp; associés est heureuse de vous accueillir sur cet
+            espace ! Chaque jour, nous nous engageons à vous recevoir avec le sourire dans un cadre
+            apaisant avec tout le confort nécessaire pour vous mettre à l’aise.<br/><br/>
+            Vous bénéficierez d’un plateau technique de pointe (caméras optiques, LASERS, microscope
+            opératoire et loupes binoculaires, cone-beam, MEOPA, salle de chirurgie, usineuse etc.)
+            permettant une prise en charge globale et minimalement invasive.<br/><br/>
+            Au plaisir de vous recevoir !!!
         </div>
         <div class="photos">
             <div class="grid-container">
@@ -465,7 +535,8 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="https://www.doctolib.fr/dentiste/la-garde/marine-rosello" target="_blank" class="employee-card-link">
+                        <a href="https://www.doctolib.fr/dentiste/la-garde/marine-rosello" target="_blank"
+                           class="employee-card-link">
                             <div class="employee-card text-center" data-aos="fade-right" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-160.jpg" alt="Dr Marine Rosello">
@@ -489,7 +560,8 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <a href="https://www.doctolib.fr/dentiste/la-garde/julien-grasset" target="_blank" class="employee-card-link">
+                        <a href="https://www.doctolib.fr/dentiste/la-garde/julien-grasset" target="_blank"
+                           class="employee-card-link">
                             <div class="employee-card text-center" data-aos="fade-left" data-aos-duration="1000">
                                 <div class="employee-photo">
                                     <img src="images/photos/CABINETDENTAIRE-152.jpg" alt="Dr Julien Grasset">
@@ -763,6 +835,17 @@
 
 <div id="loader">
     <div class="spinner"></div>
+</div>
+
+<div class="modal fade text-color" id="specialityModal" tabindex="-1" aria-labelledby="specialityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="modal-title" id="specialityModalLabel"></h5>
+                <div id="specialityModalContent"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
