@@ -173,6 +173,21 @@ a.logo {
     cursor: pointer;
 }
 
+.leafs-container {
+    left: -50%;
+    top: 50%;
+}
+
+.leafs-container-right {
+    left: calc(100% + 90px);
+    top: -100%;
+}
+
+.leafs-container-bottom {
+    top: -60%;
+    left: -10%
+}
+
 @media (max-width: 768px) {
     .nav-center {
         display: none;
