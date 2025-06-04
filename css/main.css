@@ -413,6 +413,10 @@ a.logo {
 }
 
 .employee-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     background-color: #ffffff;
     color: var(--primary-color);
     border-radius: 4px;
