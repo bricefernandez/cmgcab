@@ -61,7 +61,7 @@ a.logo {
 .hero {
     height: 400px;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,6 +82,11 @@ a.logo {
 
 .hero p {
     font-size: 20px;
+}
+
+.hero h1, .hero p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    color: #5e6f75;
 }
 
 .navbar, .nav-links {
@@ -483,6 +488,12 @@ a.logo {
 
 /* Style alternatif pour un élément sur deux */
 .employee-grid .col-6:nth-child(even) .employee-card {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Style alternatif pour un élément sur deux */
+.employee-grid-modal .employee-card {
     background-color: var(--primary-color);
     color: #fff;
 }
