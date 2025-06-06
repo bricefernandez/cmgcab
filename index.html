@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cabinet dentaire CMG & associés - Expertise, confort et soins de qualité à La Garde. Prenez rendez-vous dès aujourd'hui.">
+    <meta name="description"
+          content="Cabinet dentaire CMG & associés - Expertise, confort et soins de qualité à La Garde. Prenez rendez-vous dès aujourd'hui.">
     <meta property="og:title" content="Cabinet Dentaire CMG & Associés">
-    <meta property="og:description" content="Expertise, confort et soins de qualité à La Garde. Prenez rendez-vous dès aujourd'hui.">
+    <meta property="og:description"
+          content="Expertise, confort et soins de qualité à La Garde. Prenez rendez-vous dès aujourd'hui.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="https://cabinetdentaire-cmg.fr/">
     <title>Cabinet Dentaire</title>
@@ -52,6 +54,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="modal-footer">
+                    <a type="button" class="button button-primary" data-bs-dismiss="modal">Fermer</a>
+                </div>
             `;
             });
 
@@ -89,7 +95,8 @@
         </a>
 
         <!-- Burger menu -->
-        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
             &#9776;
         </button>
@@ -244,11 +251,6 @@
                     </a>
                 </div>
                 <div class="grid-item d-none">
-                    <a href="images/photos/CABINETDENTAIRE-4.jpg" data-fancybox="gallery" data-caption="Photo 4">
-                        <img src="images/photos/CABINETDENTAIRE-4.jpg"/>
-                    </a>
-                </div>
-                <div class="grid-item d-none">
                     <a href="images/photos/CABINETDENTAIRE-5.jpg" data-fancybox="gallery" data-caption="Photo 5">
                         <img src="images/photos/CABINETDENTAIRE-5.jpg"/>
                     </a>
@@ -364,11 +366,6 @@
                     </a>
                 </div>
                 <div class="grid-item d-none">
-                    <a href="images/photos/CABINETDENTAIRE-79.jpg" data-fancybox="gallery" data-caption="Photo 79">
-                        <img src="images/photos/CABINETDENTAIRE-79.jpg"/>
-                    </a>
-                </div>
-                <div class="grid-item d-none">
                     <a href="images/photos/CABINETDENTAIRE-100.jpg" data-fancybox="gallery" data-caption="Photo 100">
                         <img src="images/photos/CABINETDENTAIRE-100.jpg"/>
                     </a>
@@ -406,11 +403,6 @@
                 <div class="grid-item d-none">
                     <a href="images/photos/CABINETDENTAIRE-113.jpg" data-fancybox="gallery" data-caption="Photo 113">
                         <img src="images/photos/CABINETDENTAIRE-113.jpg"/>
-                    </a>
-                </div>
-                <div class="grid-item d-none">
-                    <a href="images/photos/CABINETDENTAIRE-117.jpg" data-fancybox="gallery" data-caption="Photo 117">
-                        <img src="images/photos/CABINETDENTAIRE-117.jpg"/>
                     </a>
                 </div>
                 <div class="grid-item d-none">
@@ -494,7 +486,7 @@
                         <h3 class="text-color">Dr Claire Martini</h3>
                         <h4 class="text-color">Chirurgien dentiste</h4>
                         <br>
-                        <div>Diplomée de la faculté de Marseille</div>
+                        <div class="text-color">Diplomée de la faculté de Marseille</div>
                         <!--                        <div>Formation Laser 2022/2023 - Gérard Rey</div>-->
                         <!--                        <div>Injection Acide Hyaluronique - Biotech Dental</div>-->
                         <!--                        <div>Invisalign GO - Align Technology</div>-->
@@ -617,7 +609,11 @@
 
 <div class="modal" tabindex="-1" id="modal-team">
     <div class="modal-dialog modal-xl">
-        <div class="modal-content bg-grey">
+        <div class="modal-content text-color">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h3 class="modal-title">L'équipe</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-12">
@@ -756,7 +752,7 @@
     <div class="container">
         <div class="row infos-container">
             <h2 class="col-12 text-center section-title">Avant / Après</h2>
-            <div id="casesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div id="casesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner">
                     <!-- Première slide -->
                     <div class="carousel-item active">
@@ -812,14 +808,16 @@
                 </div>
 
                 <!-- Contrôles du slider -->
-                <a class="carousel-control-prev" href="#casesCarousel" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#casesCarousel"
+                        data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Précédent</span>
-                </a>
-                <a class="carousel-control-next" href="#casesCarousel" role="button" data-slide="next">
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#casesCarousel"
+                        data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Suivant</span>
-                </a>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
             </div>
         </div>
     </div>
@@ -840,7 +838,8 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fa-solid fa-location-dot fa-xl"></i>
-                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12c91bcc9f4093f3:0xdf935e9ba5377278?sa=X&ved=1t:8290&ictx=111" class="text-color" target="_blank">831 chemin des plantades</a>
+                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12c91bcc9f4093f3:0xdf935e9ba5377278?sa=X&ved=1t:8290&ictx=111"
+                           class="text-color" target="_blank">831 chemin des plantades</a>
                     </div>
                     <div class="contact-item">
                         <i class="fa-solid fa-envelope fa-xl"></i>
@@ -870,7 +869,8 @@
     <div class="spinner"></div>
 </div>
 
-<div class="modal fade text-color" id="specialityModal" tabindex="-1" aria-labelledby="specialityModalLabel" aria-hidden="true">
+<div class="modal fade text-color" id="specialityModal" tabindex="-1" aria-labelledby="specialityModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content" id="specialityModalContent">
         </div>
